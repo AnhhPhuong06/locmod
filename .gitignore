@@ -1,0 +1,14 @@
+# Xcode temporary & user specific files
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.ipa
+*.xcarchive
+Payload/
