@@ -24,9 +24,6 @@ workflows:
       - name: Disable Code Signing in Xcode Project
         script: |
           echo "Disabling code signing in $XCODE_PROJECT/project.pbxproj..."
-          # Xóa đường dẫn Windows usymtool tránh lỗi path trên macOS
-          sed -i '' -e 's/--usymtool-path=[^ ]* //g' "$XCODE_PROJECT/project.pbxproj" || true
-
           # Tắt hoàn toàn yêu cầu code signing & development team
           sed -i '' \
             -e 's/CODE_SIGN_IDENTITY = "iPhone Developer";/CODE_SIGN_IDENTITY = "";/g' \
