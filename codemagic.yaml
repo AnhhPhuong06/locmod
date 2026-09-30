@@ -16,8 +16,11 @@ workflows:
         script: |
           git lfs pull || true
 
-      - name: Set permissions for scripts and il2cpp binaries
+      - name: Extract IL2CPP ARM64 binaries and set permissions
         script: |
+          echo "Extracting IL2CPP compiler binaries..."
+          mkdir -p Il2CppOutputProject/IL2CPP/build
+          tar -xzf deploy_arm64.tar.gz -C Il2CppOutputProject/IL2CPP/build/
           chmod +x *.sh 2>/dev/null || true
           chmod -R +x Il2CppOutputProject/ 2>/dev/null || true
 

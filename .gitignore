@@ -4,9 +4,8 @@ DerivedData/
 *.xcuserstate
 xcuserdata/
 
-# Make sure Il2Cpp ARM64 binaries are NOT ignored (Codemagic is M2 ARM64)
-!Il2CppOutputProject/IL2CPP/build/
-Il2CppOutputProject/IL2CPP/build/deploy_x86_64/
+# Ignore uncompressed IL2CPP build folder (using deploy_arm64.tar.gz instead)
+Il2CppOutputProject/IL2CPP/build/
 
 # OS generated files
 .DS_Store
